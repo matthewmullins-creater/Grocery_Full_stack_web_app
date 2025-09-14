@@ -14,8 +14,9 @@
     <!--REMOVE Items -->
     <div id="remove_items">
       <form action="/remove_items" method="POST">
+        {{form.hidden_tag()}}
         {% for item in shopping_items %}
-    <input type="checkbox" name="my_input" id="{{item}}" value="{{item}}" onchange="check_me('{{item}}')">
+        <input type="checkbox" name="my_input" id="{{item}}" value="{{item}}" onchange="check_me('{{item}}')">
         <label for="{{item}}" name="{{item}}" >{{item}}</label><br>
         {% endfor %}
         <input type="submit" value="CHECK ITEMS" id="remove_btn">
@@ -24,6 +25,7 @@
     <!-- ADD ITEMS FORM -->
     <div id="add_item">
       <form action="/add_items" method="POST">
+        {{form.hidden_tag()}}
         <select name="my_selection">
           {% for item in all_items %}
           <option value="{{ item }}">{{ item }}</option>

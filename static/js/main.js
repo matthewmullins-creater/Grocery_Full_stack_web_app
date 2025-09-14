@@ -8,6 +8,9 @@ function check_me(input_id){
   else{
     checked_label.style.textDecoration = "";
   }
+  
+  // checked_label.style.textDecoration = checked_input.checked && "line-through" || ""; 
+
   var btn = document.getElementById("remove_btn");
 
   btn.value = "REMOVE ITEMS";
